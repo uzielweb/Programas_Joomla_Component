@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" default="0" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_CREATED_BY" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_CREATED_BY" hidden="true" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_CREATED_BY"/>
+    <field name="modified_by" default="0" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_MODIFIED_BY" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_MODIFIED_BY" hidden="true" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_MODIFIED_BY"/>
+    <field name="program_name" type="text" class="program_name" required="true" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_NAME" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_PROGRAM_NAME" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_NAME"/>
+    <field name="category" type="category" extension="com_programas" required="true" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_CATEGORY" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_CATEGORY" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_CATEGORY"/>
+    <field name="genre" type="tag" mode="ajax" multiple="true" custom="allow" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_GENRE" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_GENRE" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_GENRE"/>
+    <field name="start_time" default="00:00" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_START_TIME" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_START_TIME" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_START_TIME"/>
+    <field name="end_time" default="00:00" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_END_TIME" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_END_TIME" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_END_TIME"/>
+    <field name="program_link" type="url" validate="url" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_LINK" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_PROGRAM_LINK" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_LINK"/>
+    <field name="days_of_the_week" type="list" multiple="true" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_DAYS_OF_THE_WEEK" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_DAYS_OF_THE_WEEK" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_DAYS_OF_THE_WEEK">
+      <option value="Sunday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SUNDAY</option>
+      <option value="Monday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_MONDAY</option>
+      <option value="Tuesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_TUESDAY</option>
+      <option value="Wednesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_WEDNESDAY</option>
+      <option value="Thursday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_THURSDAY</option>
+      <option value="Friday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_FRIDAY</option>
+      <option value="Saturday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SATURDAY</option>
+    </field>
+    <field name="program_description" type="editor" filter="safehtml" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_DESCRIPTION" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_PROGRAM_DESCRIPTION" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_PROGRAM_DESCRIPTION"/>
+    <field name="broadcaster_name" type="text" class="broadcaster_name" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_NAME" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_NAME" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_NAME"/>
+    <field name="broadcaster_email" type="email" validate="email" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_EMAIL" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_EMAIL" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_EMAIL"/>
+    <field name="broadcaster_image" type="media" directory="broadcaster_image" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_IMAGE" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_IMAGE" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_IMAGE"/>
+    <field name="broadcaster_link" type="text" class="broadcaster_link" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_LINK" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_LINK" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_LINK"/>
+    <field name="broadcaster_facebook" type="text" class="broadcaster_facebook" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_FACEBOOK" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_FACEBOOK" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_FACEBOOK"/>
+    <field name="broadcaster_twitter" type="text" class="broadcaster_twitter" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_TWITTER" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_TWITTER" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_TWITTER"/>
+    <field name="broadcaster_instagram" type="text" class="broadcaster_instagram" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_INSTAGRAM" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_INSTAGRAM" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_INSTAGRAM"/>
+    <field name="broadcaster_snapchat" type="text" class="broadcaster_snapchat" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_SNAPCHAT" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_SNAPCHAT" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_SNAPCHAT"/>
+    <field name="broadcaster_telegram" type="text" class="broadcaster_telegram" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_TELEGRAM" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_TELEGRAM" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_TELEGRAM"/>
+    <field name="broadcaster_whatsapp" type="text" class="broadcaster_whatsapp" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_WHATSAPP" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_WHATSAPP" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_WHATSAPP"/>
+    <field name="broadcaster_blog" type="text" class="broadcaster_blog" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_BLOG" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_BLOG" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_BLOG"/>
+    <field name="broadcaster_bio" type="editor" label="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_BIO" description="COM_PROGRAMAS_FORM_DESC_PROGRAMA_BROADCASTER_BIO" hint="COM_PROGRAMAS_FORM_LBL_PROGRAMA_BROADCASTER_BIO"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+    <field name="filter_category" type="category" extension="com_programas" show_root="1" onchange="this.form.submit();"/>
+    <field name="filter_days_of_the_week" type="list" onchange="this.form.submit();">
+      <option value="sunday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SUNDAY</option>
+      <option value="monday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_MONDAY</option>
+      <option value="tuesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_TUESDAY</option>
+      <option value="wednesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_WEDNESDAY</option>
+      <option value="thursday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_THURSDAY</option>
+      <option value="friday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_FRIDAY</option>
+      <option value="saturday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SATURDAY</option>
+    </field>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_programas" section="programa"/>
+  </fieldset>
+</form>

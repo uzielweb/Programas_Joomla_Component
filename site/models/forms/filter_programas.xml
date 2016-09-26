@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_PROGRAMAS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+<field name="days_of_the_week" label="COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK" type="list" onchange="this.form.submit();">
+  <option value="">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_FILTER</option>
+  <option value="sunday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SUNDAY</option>
+  <option value="monday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_MONDAY</option>
+  <option value="tuesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_TUESDAY</option>
+  <option value="wednesday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_WEDNESDAY</option>
+  <option value="thursday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_THURSDAY</option>
+  <option value="friday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_FRIDAY</option>
+  <option value="saturday">COM_PROGRAMAS_PROGRAMAS_DAYS_OF_THE_WEEK_OPTION_SATURDAY</option>
+</field>
+
+
+    </fields>
+</form>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_programas</name>
+    <creationDate>2016-09-21</creationDate>
+    <copyright>2016 Ponto Mega</copyright>
+    <license>GNU General Public License versão 2 ou posterior; consulte o arquivo License.txt</license>
+    <author>Ponto Mega</author>
+    <authorEmail>contato@pontomega.com.br</authorEmail>
+    <authorUrl>http://pontomega.com.br</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_PROGRAMAS_COMPONENT_DESC</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>programas.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <media destination="com_programas" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_programas.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_programas.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_programas/images/s_com_programas.png" >COM_PROGRAMAS</menu>
+        <submenu>
+            
+			<menu link="option=com_programas&amp;view=programas" view="programas" img="media/com_programas/images/s_programas.png" alt="Programas/Programas">COM_PROGRAMAS_TITLE_PROGRAMAS</menu>
+
+			<menu link="option=com_categories&amp;extension=com_programas" view="categories" img="media/com_programas/images/s_programas.png" alt="Programas/Categories">COM_PROGRAMAS_PROGRAMAS_CATEGORY</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>programas.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_programas.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_programas.sys.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_programas.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_programas.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="programas"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
