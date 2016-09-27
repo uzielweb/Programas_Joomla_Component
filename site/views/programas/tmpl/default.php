@@ -1,7 +1,7 @@
 
 <?php
 /**
- * @version    CVS: 1.0.0
+ * @version    CVS: 1.0.5
  * @package    Com_Programas
  * @author     Ponto Mega <contato@pontomega.com.br>
  * @copyright  2016 Ponto Mega
