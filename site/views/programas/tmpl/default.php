@@ -1,7 +1,7 @@
 
 <?php
 /**
- * @version    CVS: 1.0.5
+ * @version    CVS: 1.0.0
  * @package    Com_Programas
  * @author     Ponto Mega <contato@pontomega.com.br>
  * @copyright  2016 Ponto Mega
@@ -280,7 +280,7 @@ foreach($alldays as $d => $oneday)
 
 
                 </div>
-
+                <?php if ($item->program_name) : ?>
                 <div class="programas_genre">
 
                                 <i class="<?php
@@ -288,7 +288,8 @@ foreach($alldays as $d => $oneday)
                     echo $item->genre; ?>
 
                 </div>
-
+                <?php endif;?>
+                <?php if (($item->start_time) or ($item->end_time)) : ?>
                 <div>
 
                                 <i class="<?php
@@ -302,7 +303,8 @@ foreach($alldays as $d => $oneday)
                     echo $thefinaltime; ?> h
 
                 </div>
-
+                <?php endif;?>
+                <?php if ($item->days_of_the_week) : ?>
                 <div>
 
                                 <i class="<?php
@@ -310,7 +312,8 @@ foreach($alldays as $d => $oneday)
                     echo $item->days_of_the_week; ?>
 
                 </div>
-
+                <?php endif;?>
+                <?php if ($item->broadcaster_image) : ?>
                 <div>
 
 
@@ -337,7 +340,8 @@ foreach($alldays as $d => $oneday)
                     endif; ?>
 
                 </div>
-
+                <?php endif;?>
+                <?php if ($item->broadcaster_email) : ?>
                 <div>
 
                                 <i class="<?php
@@ -345,7 +349,8 @@ foreach($alldays as $d => $oneday)
                     echo $item->broadcaster_email; ?>
 
                 </div>
-
+                <?php endif;?>
+                <?php if ($item->program_description) : ?>
 
 
                      <?php
@@ -389,6 +394,7 @@ foreach($alldays as $d => $oneday)
 
                     <?php
                         } ?>
+                    <?php endif;?>
 
                         <?php
                     if ($canEdit || $canDelete): ?>
